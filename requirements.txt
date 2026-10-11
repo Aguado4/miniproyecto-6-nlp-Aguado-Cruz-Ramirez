@@ -1,0 +1,27 @@
+# Miniproyecto 6 - Agente de viajes con herramientas MCP
+# Probado con Python 3.12 en Windows 11; pensado para correr también en Google Colab.
+
+# --- Protocolo MCP y agente ---
+mcp>=1.24.0,<2.0.0
+langchain-mcp-adapters>=0.1
+langgraph>=0.2
+langchain>=0.3
+langchain-core>=0.3
+langchain-ollama>=0.2
+
+# --- Corpus y recuperación (se reutilizan de MP5) ---
+datasets>=2.18
+pandas>=2.0
+numpy>=1.26
+sentence-transformers>=3.0
+requests>=2.31
+
+# --- Interfaz y gráficas ---
+gradio>=4.44
+matplotlib>=3.8
+seaborn>=0.13
+
+# El servidor de Ollama se instala aparte (no es un paquete de Python):
+#   Windows / macOS: https://ollama.com/download
+#   Linux y Colab:   curl -fsSL https://ollama.com/install.sh | sh
+# Modelo usado: llama3.2:3b  ->  ollama pull llama3.2:3b
