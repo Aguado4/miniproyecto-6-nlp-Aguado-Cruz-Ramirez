@@ -1,0 +1,48 @@
+id,categoria,esperada,primera,seleccion_ok,args_ok,innecesarias,n_llamadas,respuesta_ok,evidencia,s,llamadas,respuesta,config
+A01,agregacion,estadisticas_destino,estadisticas_destino,True,True,0,1,1.0,,9.997211857997172,"[{""herramienta"": ""estadisticas_destino"", ""args"": {""destino"": ""Bacalar""}}]","Bacalar tiene un total de 10.822 reseñas, con una valoración media de 4,54 estrellas.",2 herramientas
+A02,agregacion,estadisticas_destino,estadisticas_destino,True,True,0,1,1.0,,5.213645302996156,"[{""herramienta"": ""estadisticas_destino"", ""args"": {""destino"": ""Palenque""}}]",La valoración media de Palenque es de 4.44 de 5 estrellas.,2 herramientas
+A03,agregacion,estadisticas_destino,estadisticas_destino,True,True,0,1,1.0,,5.012601557005837,"[{""herramienta"": ""estadisticas_destino"", ""args"": {""destino"": ""Tulum""}}]",Tulum tiene 798 reseñas con 1 estrella.,2 herramientas
+A04,agregacion,estadisticas_destino,estadisticas_destino,True,True,0,1,0.0,,6.131742627003405,"[{""herramienta"": ""estadisticas_destino"", ""args"": {""destino"": ""Valladolid""}}]","Valladolid tiene un total de 11.637 reseñas de hoteles, con una valoración media de 4.47 de 5 estrellas.",2 herramientas
+A05,agregacion,estadisticas_destino,estadisticas_destino,True,True,0,1,1.0,,5.910189811002056,"[{""herramienta"": ""estadisticas_destino"", ""args"": {""destino"": ""Isla Mujeres""}}]",La calificación promedio que dan los turistas a Isla Mujeres es de 4.52 de 5 estrellas.,2 herramientas
+A06,agregacion,estadisticas_destino,buscar_resenas,False,False,1,1,0.0,,12.206204975998844,"[{""herramienta"": ""buscar_resenas"", ""args"": {""consulta"": ""opiniones de restaurantes"", ""destino"": ""San Cristóbal de las Casas"", ""tipo"": ""Restaurant""}}]",La ciudad de San Cristóbal de las Casas tiene 5 reseñas de restaurantes en el corpus Rest-Mex.,2 herramientas
+A07,agregacion,estadisticas_destino,estadisticas_destino,True,True,0,1,1.0,,5.3667402470018715,"[{""herramienta"": ""estadisticas_destino"", ""args"": {""destino"": ""Real de Catorce""}}]",Real de Catorce tiene 463 reseñas de 5 estrellas.,2 herramientas
+A08,agregacion,estadisticas_destino,estadisticas_destino,True,True,0,1,1.0,,5.417311627999879,"[{""herramienta"": ""estadisticas_destino"", ""args"": {""destino"": ""Taxco""}}]",La valoración media de las atracciones de Taxco es de 4.46 de 5 estrellas.,2 herramientas
+A09,agregacion,estadisticas_destino,estadisticas_destino,True,True,0,1,1.0,,6.186018143002002,"[{""herramienta"": ""estadisticas_destino"", ""args"": {""destino"": ""Teotihuacan""}}]","La ciudad de Teotihuacan tiene 5810 reseñas en total, con una valoración media de 4.58 de 5 estrellas.",2 herramientas
+E01,experiencia,buscar_resenas,buscar_resenas,True,True,0,1,,1.0,28.08617889800371,"[{""herramienta"": ""buscar_resenas"", ""args"": {""estrellas_max"": 2, ""k"": 10, ""consulta"": ""quejas sobre los hoteles"", ""destino"": ""Tulum"", ""tipo"": ""Hotel""}}]","Los turistas que se quejan de los hoteles de Tulum mencionan problemas con el servicio, la limpieza, la calidad de la comida, la falta de comodidad y la mala atención del personal. Algunos también mencionan que el hotel no cumple con lo que se promete en la publicidad y que el precio no es justo para la calidad recibida.",2 herramientas
+E02,experiencia,buscar_resenas,buscar_resenas,True,True,0,1,,1.0,13.38274134900712,"[{""herramienta"": ""buscar_resenas"", ""args"": {""consulta"": ""recomendaciones de platillos"", ""destino"": ""Valladolid"", ""tipo"": ""Restaurant""}}]","Según las reseñas de los visitantes, los platillos recomendados en los restaurantes de Valladolid son:
+
+* Guacamole
+* Pasta
+* Costillas
+* Postres (no se menciona específicamente, pero se menciona que el postre es ""delicioso"")
+
+Es importante destacar que la mayoría de las reseñas tienen una calificación de 5 estrellas, lo que indica una gran satisfacción con la comida y el servicio.",2 herramientas
+E03,experiencia,buscar_resenas,buscar_resenas,True,True,0,1,,1.0,24.059945469998638,"[{""herramienta"": ""buscar_resenas"", ""args"": {""consulta"": ""opiniones sobre las pirámides de Teotihuacan"", ""destino"": ""Teotihuacan"", ""tipo"": """", ""estrellas_max"": null, ""k"": null}}]","Según las reseñas de los turistas, las pirámides de Teotihuacan son una experiencia impresionante y única. La mayoría de los visitantes consideran que es un lugar obligatorio para visitar en México, y que las pirámides son increíbles y hermosas. Algunos mencionan que el lugar está muy cerca de la ciudad de México y que es fácil llegar. También se menciona que hay vendedores ambulantes que ofrecen mercancía, pero que no es un problema para la experiencia en general.
+
+En general, las reseñas destacan la importancia histórica y cultural de Teotihuacan, y cómo es un lugar que debe ser visitado para entender mejor la historia y la civilización de los antiguos mexicanos.
+
+Fuente: Reseñas de viajeros en línea.",2 herramientas
+E04,experiencia,buscar_resenas,buscar_resenas,True,True,0,1,,1.0,26.910900546004996,"[{""herramienta"": ""buscar_resenas"", ""args"": {""destino"": ""Bacalar"", ""tipo"": ""Attractive"", ""estrellas_max"": 5, ""k"": 10, ""consulta"": ""¿qué dicen de la laguna de Bacalar?""}}]","La Laguna de Bacalar es un destino imperdible en la Riviera Maya, conocida por su belleza natural y cristalina. La laguna tiene un color azul intenso y es rodeada de selva y humedales. Es un lugar ideal para relajarse y disfrutar de la naturaleza, con opciones de kayak, tours y lanchas para recorrer la laguna y sus cenotes. La laguna es también un lugar mágico, con colores increíbles y una experiencia única. Es recomendable visitar la laguna en un día soleado y con un bloqueador para protegerse del sol.",2 herramientas
+E05,experiencia,buscar_resenas,buscar_resenas,True,True,0,1,,1.0,31.434066490000987,"[{""herramienta"": ""buscar_resenas"", ""args"": {""consulta"": ""ambiente de San Cristóbal de las Casas"", ""destino"": ""San Cristóbal de las Casas"", ""tipo"": """", ""estrellas_max"": 2, ""k"": 10}}]","Los visitantes describen el ambiente de San Cristóbal de las Casas como básico y poco acogedor, con habitaciones pequeñas y mal equipadas. Algunos mencionan que el hotel tiene un olor fuerte y que la ducha no se vuelve tibia rápidamente. Otros critican la falta de privacidad en algunos baños y la escasez de luces. Además, algunos visitantes mencionan que el museo está cerrado y que no se les notificó, lo que les causó decepción. En general, se puede decir que el ambiente de San Cristóbal de las Casas es poco acogedor y que no cumple con las expectativas de los visitantes.",2 herramientas
+E06,experiencia,buscar_resenas,buscar_resenas,True,True,0,1,,1.0,26.60282548899704,"[{""herramienta"": ""buscar_resenas"", ""args"": {""consulta"": ""problemas en restaurantes"", ""destino"": ""Isla Mujeres"", ""tipo"": ""Restaurant"", ""estrellas_max"": 2, ""k"": 10}}]","Las reseñas negativas de restaurantes en Isla Mujeres mencionan problemas como:
+
+* Pedidos olvidados o retrasados
+* Comida de baja calidad o insuficiente
+* Servicio inadecuado o educado
+* Precios elevados en comparación con la calidad de la comida
+* Falta de atención a las alergias o preferencias de los clientes
+
+Algunos ejemplos específicos mencionan:
+
+* Un restaurante que sirve comida de supermercado, como guacamole de supermercado
+* Un restaurante que tiene un especial del día que se sirve a la mesa de al lado antes de servir a los clientes
+* Un restaurante que sirve una pizza de $165 MXN con una salsa y queso de mala calidad
+* Un restaurante que tiene un servicio inadecuado, como cuando el camarero dice que el té está incluido pero no lo entrega.
+
+Fuente: Reseñas de viajeros en Isla Mujeres.",2 herramientas
+E07,experiencia,buscar_resenas,buscar_resenas,True,False,0,1,,0.0,12.279985035995196,"[{""herramienta"": ""buscar_resenas"", ""args"": {""estrellas_max"": null, ""k"": null, ""consulta"": ""cuentan los turistas sobre las Barrancas del Cobre en Creel"", ""destino"": ""Barrancas del Cobre"", ""tipo"": """"}}]","Lo siento, pero no tengo información sobre las Barrancas del Cobre en Creel en el corpus Rest-Mex. Sin embargo, puedo decirte que las Barrancas del Cobre son un lugar turístico famoso en el estado de Chihuahua, México. Según Wikipedia, son un sistema de canyones y barrancos que forman parte de la Sierra Madre Occidental. Los turistas suelen describirlos como un lugar impresionante y único, con paisajes naturales impresionantes y oportunidades para practicar deportes al aire libre como el canyoneo y el senderismo.",2 herramientas
+E08,experiencia,buscar_resenas,buscar_resenas,True,True,0,1,,1.0,13.7354118200019,"[{""herramienta"": ""buscar_resenas"", ""args"": {""tipo"": ""Hotel"", ""estrellas_max"": 2, ""k"": 10, ""consulta"": ""opiniones sobre los hoteles"", ""destino"": ""Sayulita""}}]","Los huéspedes de los hoteles de Sayulita parecen tener opiniones mixtas sobre sus estancias. Algunos han mencionado problemas con el servicio, como la falta de atención y la dificultad para resolver problemas. Otros han destacado la ubicación y la belleza de las habitaciones, pero han criticado la relación calidad-precio y la falta de actualización del hotel.
+
+En general, parece que la mayoría de los huéspedes han tenido experiencias negativas con los hoteles de Sayulita, lo que sugiere que es importante investigar y leer reseñas antes de hacer una reserva.
+
+Fuente: Corpus Rest-Mex de reseñas turísticas y fichas de Wikipedia.",2 herramientas

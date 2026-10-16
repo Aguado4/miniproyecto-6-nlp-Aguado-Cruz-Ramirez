@@ -1,0 +1,19 @@
+id,categoria,respuesta_modelo,respuesta_ok,s
+A01,agregacion,"Bacalar, en el estado de Quintana Roo, tiene una gran cantidad de reseñas en línea, pero no tengo información actualizada sobre el número exacto. Sin embargo, puedo decirte que es un destino turístico muy popular y tiene una gran cantidad de comentarios y reseñas en sitios como TripAdvisor, Booking.com y Google Reviews.",False,4.047694259999844
+A02,agregacion,"La valoración media de Palenque, un sitio arqueológico ubicado en Chiapas, México, varía según la fuente y el tipo de viajero, pero en general, se estima que una visita a Palenque cuesta alrededor de 500-700 pesos mexicanos por persona.",False,3.547795620004763
+A03,agregacion,"Según mis fuentes, Tulum tiene aproximadamente 2.500 reseñas de 1 estrella en TripAdvisor.",False,1.5777612809979473
+A04,agregacion,"En Booking.com, hay más de 2.500 reseñas de hoteles en Valladolid, Yucatán.",False,1.667208564998873
+A05,agregacion,"Según las reseñas en línea, la calificación promedio de los turistas para Isla Mujeres es de 4,8 o 5 estrellas, lo que indica una experiencia excepcional y recomendada.",False,2.7472600979963318
+A06,agregacion,San Cristóbal de las Casas tiene alrededor de 2.500 opiniones de restaurantes en plataformas como TripAdvisor.,False,1.88181433200225
+A07,agregacion,Real de Catorce tiene 2 reseñas de 5 estrellas.,False,1.2175709359944449
+A08,agregacion,"La valoración media de las atracciones de Taxco es de 4,5 estrellas en TripAdvisor, lo que indica una gran calidad y atractivo para los visitantes.",True,2.225723971001571
+A09,agregacion,Teotihuacán tiene más de 22.000 reseñas en TripAdvisor.,False,1.2159925640007714
+A10,agregacion,"Según las reseñas de viajeros, la ciudad de San Miguel de Allende tiene una de las mejores valoraciones medias, destacándose por su arquitectura colonial, su vibrante vida nocturna y su ambiente acogedor.",False,2.964295760000823
+A11,agregacion,"Los restaurantes mejor valorados en México se encuentran principalmente en la Ciudad de México, específicamente en el centro histórico y en el barrio de Polanco, donde se encuentran muchos establecimientos de alta cocina con excelentes calificaciones.",False,2.6574679069963167
+A12,agregacion,"Según mis datos, el destino con hoteles peor valorados en México es Cancún, con una media de valoración de 6,5 sobre 10 en sitios de reservas como Booking.com.",False,2.524571260000812
+H01,hecho,"Real de Catorce se encuentra en el estado de Coahuila, México.",False,1.0696672370031592
+H02,hecho,"Creel se encuentra en el estado de Chihuahua, México.",True,0.9446912709972821
+H03,hecho,Mazunte pertenece al estado de Oaxaca.,True,0.9024886359984521
+H04,hecho,"Cuatro Ciénegas se encuentra en el estado de Coahuila, México.",True,1.1262158700046712
+H05,hecho,Bernal se encuentra en el estado de México.,False,0.6981511960038915
+H06,hecho,Huasca de Ocampo se encuentra en el estado de México.,False,0.9125479189970065

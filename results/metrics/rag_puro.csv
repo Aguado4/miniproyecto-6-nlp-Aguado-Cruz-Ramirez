@@ -1,0 +1,106 @@
+id,categoria,respuesta_rag,s,respuesta_ok,evidencia
+A01,agregacion,"Según los documentos proporcionados, Bacalar tiene un total de 5 reseñas.",7.25133402600477,0.0,
+A02,agregacion,"Según el documento [1], Palenque tiene una valoración de 5 estrellas, lo que indica que es una ciudad muy atractiva.
+
+Sin embargo, si consideramos la valoración media de todos los documentos, podemos decir que Palenque tiene una valoración media de 4,5 estrellas. 
+
+El documento [2] menciona que el hotel tiene 4 estrellas, lo que sugiere que la ciudad en sí misma tiene una valoración ligeramente más alta.
+
+El documento [3] no proporciona una valoración específica, pero menciona que Palenque es una ciudad con una gran importancia turística.
+
+El documento [4] menciona que Palenque es una ciudad muy atractiva y que se recomienda visitar el Museo de Sitio, lo que sugiere una valoración alta.
+
+El documento [5] menciona que el hotel tiene una buena relación calidad-precio y que se recomienda a cualquiera, lo que sugiere una valoración alta.
+
+En resumen, aunque no hay una valoración media exacta, podemos decir que Palenque tiene una valoración media de 4,5 estrellas, lo que indica que es una ciudad muy atractiva y con una gran importancia turística.",24.021711065004638,0.0,
+A03,agregacion,"Lo siento, pero no tengo información sobre reseñas de 1 estrella de Tulum. Sin embargo, puedo decirte que no hay reseñas de 1 estrella en los documentos proporcionados. Todos los comentarios son de 5 estrellas.",12.139090625998506,0.0,
+A04,agregacion,"Según los documentos proporcionados, hay 5 reseñas de hoteles en Valladolid.",12.15782426000078,0.0,
+A05,agregacion,"Según el documento [1], Isla Mujeres tiene una calificación de 5 estrellas, lo que indica que es un lugar muy atractivo y recomendable.
+
+Sin embargo, según el documento [2], la playa de Isla Mujeres ha recibido la certificación Blue Flag, lo que sugiere que la calificación promedio de los turistas puede variar dependiendo del lugar específico en la isla.
+
+En cuanto a los hoteles, según los documentos [3], [4] y [5], la calificación promedio es de 4 estrellas, lo que indica que son hoteles de buena calidad y recomendables.
+
+En general, no se menciona una calificación promedio para Isla Mujeres en los documentos proporcionados. Sin embargo, se puede inferir que la isla tiene una buena reputación y que los lugares que se mencionan son recomendables.",23.504745989994262,0.0,
+A06,agregacion,"Según los documentos proporcionados, San Cristóbal de las Casas tiene 3 opiniones de restaurantes:
+
+* El mejor pan de San Cristóbal de las Casas (4 estrellas)
+* El mejor restaurante en San Cristóbal de las Casas (5 estrellas)
+* Una de las mejores opciones (5 estrellas)
+
+También hay una mención a otro restaurante que no tiene estrellas asignadas, pero se menciona que es delicioso y que se recomienda.",14.89111878300173,0.0,
+A07,agregacion,"Según las reseñas proporcionadas, hay 3 reseñas de 5 estrellas para Real de Catorce: 
+
+- [1] Real de Catorce | Restaurant | 5 estrellas: El restaurante de mayor tradicion en Real de 14. Muy buen restaurant, dentro del hotel q lleva el mismo nombre. El ambiente es unico ya que el lugar fue construido hace cientos de años el menú es muy bueno. De lo mejor que hay en Real de Catorce.
+- [4] Real de Catorce | Restaurant | 5 estrellas: Excelente!. Deliciosa la pasta y la pizza, muy buen lugar y magnifica atención de todo su personal, además los precios son muy razonables. De verdad es un restaurant que sería una pena no visitar en Real De Catorce
+- [5] Real de Catorce | Restaurant | 4 estrellas: Restaurante obligado en Real de Catorce. Un restaurante que no pueden dejar de visitar si van a Real de Catorce. El lugar es muy bonito lleno de rincones y detalles. La comida es muy rica. Pedimos una Pizza Abundancia que hacía honor al nombre, exquisita. Las tortillas de maíz negro son...Más
+
+Sin embargo, es importante destacar que la reseña [5] tiene 4 estrellas, no 5. Por lo tanto, solo hay 2 reseñas de 5 estrellas para Real de Catorce.",29.038876251004694,0.0,
+A08,agregacion,"Según el documento [1], Taxco tiene una valoración media de 5 estrellas, lo que indica una gran atractivo y calidad en las atracciones de la ciudad.",8.185128896002425,0.0,
+A09,agregacion,"Según el documento [3] Teotihuacan | Attractive | 5 estrellas, hay 3 reseñas de Teotihuacan.",11.208035483999993,0.0,
+A10,agregacion,"Según los documentos proporcionados, Cuetzalan tiene la mejor valoración media con 5 estrellas en todos los documentos.",8.953411160997348,0.0,
+A11,agregacion,"Según los documentos proporcionados, los restaurantes mejor valorados se encuentran en los siguientes destinos:
+
+* Izamal (5 estrellas)
+* Patzcuaro (5 estrellas)
+* Tulum (5 estrellas)
+
+Estos tres destinos tienen restaurantes con una calificación de 5 estrellas, lo que indica un excelente servicio, comida y ambiente.",8.912616480003635,1.0,
+A12,agregacion,"Según el documento [5] Tepoztlan | Hotel | 1 estrellas, el destino con los hoteles peor valorados es Tepoztlan.",9.857316771995102,0.0,
+E01,experiencia,"Según los documentos proporcionados, los turistas en los hoteles de Tulum se quejan de lo siguiente:
+
+* Falta de playa en algunos hoteles (Tulum | Hotel | 3 estrellas y Tulum | Hotel | 2 estrellas)
+* Comida horrible o normal (Tulum | Hotel | 3 estrellas y Tulum | Hotel | 2 estrellas)
+* Vino avinagrado (Tulum | Hotel | 2 estrellas)
+* Dificultad para encontrar un lugar cómodo en la playa (Tulum | Hotel | 2 estrellas)
+* Problemas para conseguir una toalla o un servicio básico (Tulum | Hotel | 2 estrellas)
+* Habitaciones frías y sin alma (Tulum | Hotel | 3 estrellas)
+* Falta de personal amable o eficiente (Tulum | Hotel | 2 estrellas)
+* Precios altos en comparación con otros hoteles (Tulum | Hotel | 2 estrellas)
+* Falta de comodidades y servicios en algunos hoteles (Tulum | Hotel | 2 estrellas y Tulum | Hotel | 5 estrellas)
+
+Es importante destacar que no todos los hoteles de Tulum presentan estos problemas, ya que algunos tienen buenas reseñas y se destacan por su servicio y comodidades.",25.898405648003973,,0.2
+E02,experiencia,"Según los documentos proporcionados, los platillos recomendados por los visitantes en los restaurantes de Valladolid son:
+
+* Lomitos de Valladolid (documento [1])
+* Pechuga Caribeña (documento [1])
+* Poc chuc (documento [4])",10.151913485999103,,1.0
+E03,experiencia,"Según los comentarios de los turistas, las pirámides de Teotihuacan son consideradas una experiencia única y emocionante. Todos mencionan que subir a las pirámides es algo indescriptible y que la vista desde arriba es hermosa. También destacan que las pirámides son increíbles y hermosas, especialmente la del sol y la de la luna.
+
+Sin embargo, también mencionan que el sitio puede estar dañado por el exceso de vendedores ambulantes y el ruido que generan. Algunos turistas también mencionan que la experiencia puede ser un poco intimidante para aquellos que sufren de vértigo.
+
+En general, todos los turistas mencionan que Teotihuacan es un lugar excelente y una visita obligatoria cuando se visita Ciudad de México.",19.421167811000487,,0.8
+E04,experiencia,"Según las reseñas, la laguna de Bacalar es descrita como:
+
+* Mágica y espectacular (documentos [1], [2], [4])
+* Hermosa y única (documentos [1], [2], [3], [5])
+* Imperdible y bellísimo (documentos [3], [4], [5])
+* Con colores impresionantes que cambian con el sol (documento [4])
+* Perfecta para relajarse y disfrutar nadando debido a su baja profundidad y corriente imperceptible (documento [5])
+* Con una pureza y inmensidad impresionantes (documento [2])",15.911232187005226,,1.0
+E05,experiencia,"Según los documentos, los visitantes describen el ambiente de San Cristóbal de las Casas como ""relajante al espíritu"" (documento [2]) y ""maravillosa"" (documento [4]). También mencionan la armonía entre los tejados y el cielo azul, con el fondo de la montaña, como una vista impresionante.",13.312390090999543,,0.8
+E06,experiencia,"Según las reseñas negativas de restaurantes en Isla Mujeres, no se mencionan problemas específicos en las reseñas. Sin embargo, en la reseña de [4] Isla Mujeres | Restaurant | 5 estrellas, se menciona que el restaurante tiene un menú y un servicio excelente, pero no se mencionan problemas.",12.195473211002536,,0.0
+E07,experiencia,"Según los documentos proporcionados, los turistas mencionan lo siguiente sobre las Barrancas del Cobre en Creel:
+
+* El hotel Creel (5 estrellas) es recomendado para quedarse en Creel, ya que está muy bonito, bien cuidado, limpio y tiene una buena atención del personal.
+* El Best Western de Creel (4 estrellas) es un hotel rústico limpio y bien situado, con una buena comida y un servicio eficiente.
+* La excursión por el cañón de las Barrancas del Cobre es una experiencia destacada, ya que se puede disfrutar de la naturaleza y la belleza del lugar.
+* El hotel Creel (4 estrellas) tiene una ubicación céntrica, lo que facilita el acceso a las atracciones del lugar.
+* Sin embargo, también hay una mención negativa sobre el hotel Creel (1 estrella), que describe como ""sobrevendido"" y con un sistema de reservaciones deficiente.
+
+En general, los turistas mencionan que las Barrancas del Cobre en Creel son un destino imprescindible para disfrutar de la naturaleza y la belleza del lugar.",22.845185808997485,,0.8
+E08,experiencia,"Según los comentarios de los huéspedes, los hoteles de Sayulita tienen una gran opinión. Se destacan:
+
+* La ubicación perfecta y el servicio excelente (documentos [1] y [2]).
+* La belleza y limpieza del hotel, así como la tranquilidad y seguridad del área (documentos [3] y [4]).
+* La comodidad y amabilidad del personal (documentos [1], [2], [3] y [4]).
+* La relación costo-beneficio y la calidad del servicio (documento [2]).
+* La posibilidad de disfrutar de actividades como ver atardeceres en la playa (documento [4]).
+
+En general, los huéspedes recomiendan estos hoteles a otros viajeros y expresan su satisfacción con su estancia en Sayulita.",16.724877402004495,,1.0
+H01,hecho,"Según el documento [1] de Wikipedia, Real de Catorce está ubicado en el estado de San Luis Potosí, al norte del estado.",9.59132528000191,1.0,
+H02,hecho,"Según el documento [1] de Wikipedia, Creel se encuentra en el estado mexicano de Chihuahua.",9.60018743499677,1.0,
+H03,hecho,"Según el documento [1] Mazunte | Wikipedia | 0 estrellas, Mazunte pertenece al estado de Oaxaca, México.",10.164119743996707,1.0,
+H04,hecho,"Según el documento [1] Wikipedia, Cuatro Ciénegas está ubicada en el estado mexicano de Coahuila.",11.081453373997647,1.0,
+H05,hecho,"Según el documento [1] Bernal | Wikipedia | 0 estrellas, Bernal se encuentra en el estado mexicano de Querétaro.",11.78246904599655,1.0,
+H06,hecho,"Según el documento [1] Huasca de Ocampo | Wikipedia, Huasca de Ocampo se encuentra en el estado de Hidalgo, México.",12.002132458997949,1.0,

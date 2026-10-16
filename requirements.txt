@@ -1,27 +1,33 @@
 # Miniproyecto 6 - Agente de viajes con herramientas MCP
-# Probado con Python 3.12 en Windows 11; pensado para correr también en Google Colab.
+# Versiones con las que se hizo la corrida de referencia (Python 3.12, Linux, CPU).
+# Los rangos permiten parches; los mínimos son las versiones probadas.
 
 # --- Protocolo MCP y agente ---
-mcp>=1.24.0,<2.0.0
-langchain-mcp-adapters>=0.1
-langgraph>=0.2
-langchain>=0.3
-langchain-core>=0.3
-langchain-ollama>=0.2
+mcp>=1.30.0,<2.0.0
+langchain-mcp-adapters>=0.3.2,<0.4
+langgraph>=1.2.15,<2.0
+langchain>=1.4.6,<2.0
+langchain-core>=1.6.11,<2.0
+langchain-ollama>=1.1.0,<2.0
 
 # --- Corpus y recuperación (se reutilizan de MP5) ---
-datasets>=2.18
-pandas>=2.0
-numpy>=1.26
-sentence-transformers>=3.0
-requests>=2.31
+datasets>=5.1.0
+pandas>=3.0.6
+pyarrow>=26.0.0
+numpy>=2.5.4
+sentence-transformers>=6.1.0
+torch>=2.14.1
+requests>=2.34.2
 
-# --- Interfaz y gráficas ---
-gradio>=4.44
-matplotlib>=3.8
-seaborn>=0.13
+# --- Interfaz, gráficas y ejecución del notebook ---
+gradio>=6.30.0,<7.0
+matplotlib>=3.11.2
+seaborn>=0.13.2
+ipykernel>=7.4.0
 
-# El servidor de Ollama se instala aparte (no es un paquete de Python):
+# torch sin GPU (más liviano):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# El servidor de Ollama se instala aparte (no es un paquete de Python), probado con 0.34.0:
 #   Windows / macOS: https://ollama.com/download
 #   Linux y Colab:   curl -fsSL https://ollama.com/install.sh | sh
 # Modelo usado: llama3.2:3b  ->  ollama pull llama3.2:3b
