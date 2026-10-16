@@ -43,13 +43,15 @@ destino.
   **Aceptar también la forma con espacios y sin tildes**, porque es como la escribirá el agente.
 - Si el destino no existe, devolver un mensaje con los destinos parecidos, no una excepción.
 
-### `comparar_destinos(n: int = 5, tipo: str | None = None, min_resenas: int = 100) -> str`
+### `comparar_destinos(n: int = 5, tipo: str | None = None, min_resenas: int = 100, peores: bool = False) -> str`
 
 Ranking de destinos por valoración media.
 
 - `tipo`: `Hotel`, `Restaurant`, `Attractive` o nada para todos.
 - `min_resenas`: sin un mínimo, el ranking lo ganan destinos con tres reseñas y el resultado no
   dice nada. El valor por omisión existe por eso.
+- `peores`: `True` ordena de peor a mejor valorado (D-606). Un `n` negativo era una convención
+  que un modelo de 3B no descubre leyendo el esquema.
 
 ## `busqueda_mcp_server.py`
 
@@ -91,20 +93,27 @@ humanos: son la entrada del clasificador que decide. Dos consecuencias práctica
    así que las descripciones no se tocan a mitad del experimento sin anotarlo en
    `docs/DECISIONS.md`.
 
+## Archivos que leen al arrancar
+
+Los genera §2 del notebook y no se versionan: `data/restmex.parquet` (corpus completo),
+`data/restmex_indice.parquet` y `data/vectorstore_e5.npy` (índice de búsqueda, D-605). Las fichas
+`data/fichas_destino.json` sí se versionan. `comun.py` traduce los nombres que escribe el agente
+(«San Cristóbal de las Casas») a los del corpus (`San_Cristobal_de_las_Casas`).
+
 ## Cómo probarlos sin el notebook
 
 ```bash
-# en una terminal
-python mcp_servers/corpus_mcp_server.py
+# en una terminal, desde mcp_servers/ (después de ejecutar §2 del notebook)
+cd mcp_servers && python corpus_mcp_server.py
 
 # en otra, un cliente mínimo
 python -c "
 import asyncio
 from mcp import ClientSession
-from mcp.client.streamable_http import streamablehttp_client
+from mcp.client.streamable_http import streamable_http_client
 
 async def main():
-    async with streamablehttp_client('http://localhost:9090/mcp') as (r, w, _):
+    async with streamable_http_client('http://localhost:9090/mcp') as (r, w, _):
         async with ClientSession(r, w) as s:
             await s.initialize()
             print([t.name for t in (await s.list_tools()).tools])
