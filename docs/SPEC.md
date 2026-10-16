@@ -1,6 +1,6 @@
 # SPEC - Especificación del entregable
 
-> **Estado:** borrador · **Versión:** 0.1 · **Última actualización:** 2026-10-11
+> **Estado:** implementado · **Versión:** 1.0 · **Última actualización:** 2026-10-16
 >
 > Contrato del entregable. Si la implementación se desvía, se actualiza primero este archivo.
 
@@ -101,22 +101,22 @@ Archivo único: `notebooks/miniproyecto6_restmex_mcp.ipynb`
 | 2 | El corpus (reutilizado de MP5) y el EDA mínimo que las herramientas necesitan |
 | 3 | Qué es MCP y por qué no es «una función más»: servidor, transporte, cliente |
 | 4 | Los dos servidores y sus cuatro herramientas, probadas una por una |
-| 5 | Sin herramientas: el modelo solo, para ver qué inventa |
+| 5 | El banco de preguntas con su respuesta calculada, el calificador y el modelo solo, para ver qué inventa |
 | 6 | El agente con herramientas y la lectura de su traza |
 | 7 | **Banco de preguntas y evaluación automática** (H1 y H2) |
-| 8 | **Dos herramientas frente a cuatro** (H3) |
+| 8 | **Dos herramientas frente a cuatro, y cuatro con descripciones de una línea** (H3, D-608) |
 | 9 | Comparación con el RAG puro de MP5 en las mismas preguntas |
 | 10 | El chatbot en Gradio, con la traza de herramientas visible |
 | 11 | Conclusiones y limitaciones |
 
 ## 5. Criterios de aceptación
 
-- [ ] «Restart & Run All» sin errores, arrancando y apagando los servidores desde el notebook.
-- [ ] Degrada sin GPU y avisa con claridad si falta Ollama, sin romperse.
-- [ ] Toda gráfica y tabla con su lectura; conclusiones que responden H1, H2 y H3.
-- [ ] El chatbot **muestra qué herramienta llamó y con qué argumentos**, no solo la respuesta.
-- [ ] Celda de Gradio lista para grabar el video.
-- [ ] Sin `TODO`, `PENDIENTE` ni comentarios de andamiaje.
+- [x] «Restart & Run All» sin errores, arrancando y apagando los servidores desde el notebook.
+- [x] Degrada sin GPU y avisa con claridad si falta Ollama, sin romperse.
+- [x] Toda gráfica y tabla con su lectura; conclusiones que responden H1, H2 y H3.
+- [x] El chatbot **muestra qué herramienta llamó y con qué argumentos**, no solo la respuesta.
+- [x] Celda de Gradio lista para grabar el video.
+- [x] Sin `TODO`, `PENDIENTE` ni comentarios de andamiaje.
 
 ## 6. Mapa rúbrica → notebook
 
@@ -132,8 +132,8 @@ El detalle de qué hace falta para cada punto está en [`RUBRICA.md`](RUBRICA.md
 ## 7. Entregable aparte: el video
 
 La consigna exige un **video de máximo 2 minutos** con la celda que levanta Gradio y un par de
-interacciones donde se vea que el bot responde **con referencias a lo que usó**. **Lo graba el
-equipo.** §10 debe dejar la interfaz y un guion de preguntas que muestre una llamada a herramienta
+interacciones donde se vea que el bot responde **con referencias a lo que usó**. Está en
+`results/video/demo_chatbot_mcp.mp4` (D-609). §10 deja la interfaz y un guion de preguntas que muestre una llamada a herramienta
 y una respuesta con cita.
 
 ## 8. Fuera de alcance

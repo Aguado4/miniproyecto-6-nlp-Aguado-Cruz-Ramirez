@@ -90,6 +90,104 @@ declarada como cualitativa.
 
 ---
 
+## D-605 · El índice de búsqueda es una muestra estratificada; el cálculo usa el corpus completo
+
+**Estado:** aceptada · 2026-10-16
+
+**Contexto.** Codificar las 208.051 reseñas con `multilingual-e5-small` en CPU toma cerca de
+media hora, y la reproducibilidad pide que «Restart & Run All» termine en un tiempo razonable.
+
+**Decisión.** `buscar_resenas` busca sobre una muestra de **hasta 250 reseñas por destino y
+tipo** (semilla 42), que conserva los 120 grupos y toma completos los pequeños. Las herramientas de
+cálculo leen siempre el corpus completo.
+
+**Alternativas.** (a) Codificar todo: media hora extra en cada ejecución desde cero. (b) Muestra
+aleatoria simple: los grupos pequeños (Cholula hoteles tiene 15 reseñas) quedarían vacíos y el
+filtro por destino y tipo devolvería nada.
+
+**Consecuencias.** La asimetría es deliberada y refuerza la tesis: el índice ve una fracción del
+corpus y **no puede contar**, lo que §9 mide.
+
+---
+
+## D-606 · `comparar_destinos` recibe `peores: bool` en lugar de un `n` negativo
+
+**Estado:** aceptada · 2026-10-16
+
+**Contexto.** El primer diseño pedía un `n` negativo para el ranking de peor valorados. Es una
+convención que un modelo de 3B no descubre leyendo el esquema.
+
+**Decisión.** Un argumento explícito `peores: bool = False`, documentado en el docstring.
+
+**Consecuencias.** El contrato de `mcp_servers/README.md` se actualiza. La pregunta A12 del banco
+mide si el agente lo usa.
+
+---
+
+## D-607 · La corrida de referencia es solo CPU
+
+**Estado:** aceptada · 2026-10-16
+
+**Contexto.** La GPU de la máquina de referencia se usa para otras tareas y no se ocupa sin
+confirmación.
+
+**Decisión.** `MP6_SOLO_CPU=1` pasa `num_gpu=0` a Ollama y el codificador corre en CPU. Sin la
+variable, Ollama decide como siempre, de modo que en otra máquina la GPU se aprovecha sola.
+
+**Consecuencias.** Las latencias reportadas son de CPU y son una cota superior.
+
+---
+
+## D-608 · La ablación de descripciones se hace en el cliente, no con otro servidor
+
+**Estado:** aceptada · 2026-10-16
+
+**Contexto.** Para medir cuánto del acierto de selección se debe a los docstrings hace falta una
+versión de las herramientas con descripciones pobres.
+
+**Decisión.** Copiar las herramientas descubiertas por MCP y sustituir solo su `description` por
+una frase de dos o tres palabras. El esquema de argumentos y el servidor no cambian.
+
+**Alternativas.** Un tercer servidor con docstrings cortos: duplica código y un tercer puerto que
+apagar, para cambiar exactamente el mismo texto que el modelo lee.
+
+**Consecuencias.** Se aísla la variable que interesa: la descripción que llega al modelo.
+
+---
+
+## D-609 · El video se graba automatizando JupyterLab con Playwright
+
+**Estado:** aceptada · 2026-10-16
+
+**Contexto.** La consigna exige un video con la ejecución de la celda de Gradio y dos
+interacciones con referencias.
+
+**Decisión.** Las celdas previas se ejecutan en un contexto de navegador sin grabar; un segundo
+contexto, grabado, se conecta al mismo kernel, ejecuta la celda de Gradio y hace dos preguntas
+dentro de la interfaz incrustada. El video queda en `results/video/`.
+
+**Consecuencias.** Lo que se ve es la ejecución real, con latencias reales de CPU. Si la espera
+hace que pase de dos minutos, solo se aceleran los tramos de espera y se indica en el video.
+
+---
+
+## D-610 · Los argumentos numéricos opcionales aceptan `null`
+
+**Estado:** aceptada · 2026-10-16
+
+**Contexto.** En la primera corrida, `llama3.2:3b` llamó `buscar_resenas` con `k: null` y
+`estrellas_max: null`. Con `k: int = 5` el esquema rechazaba el `null`, la herramienta devolvía un
+error de validación y el modelo respondió con conocimiento propio («cochinita pibil») creyendo
+que no tenía la herramienta. Es un fallo de **contrato**, no de elección.
+
+**Decisión.** Declarar `k`, `n`, `min_resenas` y `peores` como opcionales (`int | None`,
+`bool | None`); el servidor ya convertía los vacíos al valor por omisión.
+
+**Consecuencias.** Los esquemas MCP deben ser tolerantes con lo que un modelo pequeño escribe de
+verdad. Las cifras reportadas son de la corrida posterior a este cambio.
+
+---
+
 ## Plantilla para nuevas entradas
 
 ## D-6NN · Título breve

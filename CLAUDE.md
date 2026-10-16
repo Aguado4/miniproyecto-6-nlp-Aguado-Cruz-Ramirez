@@ -78,8 +78,10 @@ herramientas frente a cuatro, y la comparación con el RAG de MP5 (SPEC §6).
 - No dejar `TODO` ni `PENDIENTE` en el entregable final.
 - No ejecutar nada en la GPU sin confirmar: el usuario la usa para otras cosas.
 
-## 6. Pendientes que no dependen del agente
+## 6. Estado de la entrega
 
-- El **video de 2 minutos** con la demo de Gradio lo graba el equipo. Su ausencia afecta
-  considerablemente la calificación (ver `consigna.txt` y `docs/RUBRICA.md` §5).
-- El reparto del trabajo entre los tres integrantes está propuesto en `docs/PLAN.md`.
+- Corrida de referencia y números en `docs/EXPERIMENTS.md`; el notebook se versiona con sus salidas.
+- El **video** está en `results/video/demo_chatbot_mcp.mp4`. Falta adjuntarlo en Intu o subirlo a
+  una plataforma y pegar el enlace en la entrega.
+- Si se cambia un docstring o el banco, hay que volver a ejecutar todo y actualizar
+  `EXPERIMENTS.md`: las lecturas del notebook citan cifras de esa corrida.

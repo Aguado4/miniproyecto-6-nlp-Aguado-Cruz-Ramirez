@@ -55,18 +55,32 @@ Las dos primeras **calculan**; las dos últimas **recuperan**. La pareja
 agente entiende la diferencia entre «cuántos» y «qué dicen». Contrato completo en
 [`mcp_servers/README.md`](mcp_servers/README.md).
 
-## Estado
-
-**Scaffolding.** Hay diseño, contrato de herramientas y esqueleto de notebook; falta el código de
-los servidores y la corrida.
-
-El trabajo está repartido en tres bloques independientes en
-[`docs/PLAN.md`](docs/PLAN.md), y lo que tiene que ser verdad para cumplir la rúbrica completa
-está en [`docs/RUBRICA.md`](docs/RUBRICA.md).
-
 ## Resultados
 
-> Pendiente de la corrida de referencia ([`docs/EXPERIMENTS.md`](docs/EXPERIMENTS.md)).
+Corrida de referencia del 2026-10-16: 26 preguntas, `llama3.2:3b` en CPU, temperatura 0, 31,8 min
+desde cero ([`docs/EXPERIMENTS.md`](docs/EXPERIMENTS.md)).
+
+| Camino | Agregación (cifra exacta) | Experiencia (evidencia pertinente) | Hecho (estado correcto) |
+|---|---:|---:|---:|
+| Modelo solo, sin herramientas | 1 / 12 | sin evidencia | 4 / 6 |
+| RAG puro, como en MP5 | 1 / 12 | 0,70 | 6 / 6 |
+| **Agente con 4 herramientas MCP** | **11 / 12** | **0,88** | **6 / 6** |
+
+- **H1, confirmada.** Solo el agente da cifras exactas. El modelo solo inventa números «de
+  TripAdvisor» y el RAG responde con el número de documentos que recuperó («Bacalar tiene 5
+  reseñas»; tiene 10.822).
+- **H2, parcial.** La selección fue perfecta (26 de 26). Los errores fueron un argumento inventado,
+  una cifra mal leída y un esquema que rechazaba `null` (D-610).
+- **H3, refutada tal como se planteó.** Pasar de 2 a 4 herramientas no empeoró la elección (94 % →
+  100 %). Lo que la hunde son las **descripciones**: con docstrings de una línea, la selección cae
+  al 47 % y la cifra exacta al 0 %.
+
+## El video
+
+**[`results/video/demo_chatbot_mcp.mp4`](results/video/demo_chatbot_mcp.mp4)** (1 min 12 s):
+ejecución de la celda que levanta Gradio y dos preguntas. En la primera el bot cita la herramienta
+`estadisticas_destino` y las cifras exactas; en la segunda, ocho reseñas con su destino, tipo y
+estrellas.
 
 ## Cómo ejecutarlo
 
@@ -74,15 +88,9 @@ está en [`docs/RUBRICA.md`](docs/RUBRICA.md).
    - Windows y macOS: instalador de <https://ollama.com/download>
    - Linux y Colab: `curl -fsSL https://ollama.com/install.sh | sh`
 2. El modelo: `ollama pull llama3.2:3b` (unos 2 GB).
-3. Las dependencias: `pip install -r requirements.txt`
-4. Abrir `notebooks/miniproyecto6_restmex_mcp.ipynb` y ejecutar de arriba abajo. El notebook
-   arranca los servidores MCP y **los apaga al final**; si una ejecución se interrumpe, hay que
-   correr la celda de apagado antes de volver a empezar, o el puerto quedará ocupado.
-
-## El video
-
-La consigna exige un video de **máximo 2 minutos** con la celda que levanta Gradio y un par de
-interacciones donde el bot responda citando lo que usó. Lo graba el equipo; §10 deja la interfaz y
-un guion de preguntas.
-
-> Enlace al video: *pendiente*
+3. Las dependencias, en un entorno nuevo con Python 3.12: `pip install -r requirements.txt`
+4. Abrir `notebooks/miniproyecto6_restmex_mcp.ipynb` y ejecutar de arriba abajo. La primera vez
+   descarga el corpus y codifica el índice de búsqueda (unos 9 min en CPU); después lo reutiliza.
+   El notebook arranca los servidores MCP y **los apaga al final**; si una ejecución se
+   interrumpe, la siguiente apaga sola lo que haya quedado vivo antes de arrancar.
+5. Opcional: `MP6_SOLO_CPU=1` impide que Ollama use la GPU, como en la corrida de referencia.

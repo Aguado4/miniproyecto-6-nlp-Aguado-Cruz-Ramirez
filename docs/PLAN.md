@@ -1,7 +1,7 @@
 # PLAN - Ejecución y reparto del trabajo
 
-> Estado global: **scaffolding.** Hay diseño, contrato de herramientas y esqueleto de notebook;
-> no hay código de servidores ni corrida.
+> Estado global: **listo para entregar.** Servidores, notebook ejecutado con salidas, métricas,
+> figuras y video. Corrida de referencia del 2026-10-16 en `EXPERIMENTS.md`.
 
 Leyenda: `[ ]` pendiente · `[~]` en curso · `[x]` hecho
 
@@ -27,36 +27,36 @@ firma de cada herramienta, las tres partes encajan sin negociar nada más.
 Quien lo tome escribe Python puro, sin notebook, y puede probarlo con `python
 mcp_servers/corpus_mcp_server.py` y un cliente mínimo.
 
-- [ ] `corpus_mcp_server.py`: `estadisticas_destino` y `comparar_destinos`
-- [ ] `busqueda_mcp_server.py`: `buscar_resenas` y `ficha_destino`
-- [ ] Carga del corpus una sola vez al arrancar el servidor, no por llamada
-- [ ] Manejo de destino inexistente: mensaje útil, no excepción
-- [ ] Docstrings cuidados: **son lo que el agente lee para elegir**, así que son parte del
+- [x] `corpus_mcp_server.py`: `estadisticas_destino` y `comparar_destinos`
+- [x] `busqueda_mcp_server.py`: `buscar_resenas` y `ficha_destino`
+- [x] Carga del corpus una sola vez al arrancar el servidor, no por llamada
+- [x] Manejo de destino inexistente: mensaje útil, no excepción
+- [x] Docstrings cuidados: **son lo que el agente lee para elegir**, así que son parte del
       experimento de H3 y no un adorno
 
 ### Bloque B · El notebook, §1 a §6
 
-- [ ] §1 entorno: Ollama, MCP, semilla, degradación sin GPU
-- [ ] §2 corpus y EDA mínimo (se puede copiar de MP5 lo que aplique)
-- [ ] §3 explicación de MCP: servidor, transporte, cliente, invocación
-- [ ] §4 arranque y apagado de los servidores, y las cuatro herramientas probadas una por una
-- [ ] §5 el modelo sin herramientas, para ver qué inventa
-- [ ] §6 el agente con herramientas y la lectura de la traza
+- [x] §1 entorno: Ollama, MCP, semilla, degradación sin GPU
+- [x] §2 corpus y EDA mínimo (se puede copiar de MP5 lo que aplique)
+- [x] §3 explicación de MCP: servidor, transporte, cliente, invocación
+- [x] §4 arranque y apagado de los servidores, y las cuatro herramientas probadas una por una
+- [x] §5 el modelo sin herramientas, para ver qué inventa
+- [x] §6 el agente con herramientas y la lectura de la traza
 
 ### Bloque C · El notebook, §7 a §11
 
-- [ ] §7 banco de preguntas y evaluación automática (H1 y H2)
-- [ ] §8 dos herramientas frente a cuatro (H3)
-- [ ] §9 comparación con el RAG de MP5
-- [ ] §10 chatbot en Gradio con la traza visible, y guion para el video
-- [ ] §11 conclusiones y limitaciones
-- [ ] `EXPERIMENTS.md` con los números de la corrida de referencia
+- [x] §7 banco de preguntas y evaluación automática (H1 y H2)
+- [x] §8 dos herramientas frente a cuatro (H3)
+- [x] §9 comparación con el RAG de MP5
+- [x] §10 chatbot en Gradio con la traza visible, y guion para el video
+- [x] §11 conclusiones y limitaciones
+- [x] `EXPERIMENTS.md` con los números de la corrida de referencia
 
 ### Transversal
 
-- [ ] Restart & Run All limpio (lo hace quien cierre)
-- [ ] **Grabar el video de 2 minutos** (ver `RUBRICA.md` §5)
-- [ ] Repasar el checklist de `RUBRICA.md` completo antes de entregar
+- [x] Restart & Run All limpio (lo hace quien cierre)
+- [x] **Grabar el video de 2 minutos** (ver `RUBRICA.md` §5)
+- [x] Repasar el checklist de `RUBRICA.md` completo antes de entregar
 
 ## Riesgos conocidos
 
@@ -73,7 +73,6 @@ Tres cosas que ya nos costaron tiempo en entregas anteriores y que conviene vigi
 
 ## Presupuesto de tiempo
 
-Sin medir todavía. Lo único que se sabe por MP5 es que `llama3.2:3b` por Ollama responde en
-segundos, y que cada pregunta al agente implica al menos dos pasadas por el modelo (una para
-decidir la herramienta y otra para redactar). El banco de preguntas hay que dimensionarlo con ese
-dato en la mano, no antes.
+Medido en la corrida de referencia (CPU, `llama3.2:3b`): una pregunta de agregación cuesta unos
+7 s, una de experiencia unos 22 s y una de hechos unos 10 s. El notebook completo, desde cero,
+tarda 31,8 min, de los cuales 9 son la codificación del índice de búsqueda.
